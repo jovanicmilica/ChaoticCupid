@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaoticCupid.Service", "ChaoticCupid.Service\ChaoticCupid.Service.csproj", "{FDA2E2B2-6444-461B-BBCC-3FABC1D4DCF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaoticCupid.Client", "ChaoticCupid.Client\ChaoticCupid.Client.csproj", "{246289CF-BDF7-4344-95F8-78F6B00B4F38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDA2E2B2-6444-461B-BBCC-3FABC1D4DCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA2E2B2-6444-461B-BBCC-3FABC1D4DCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA2E2B2-6444-461B-BBCC-3FABC1D4DCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA2E2B2-6444-461B-BBCC-3FABC1D4DCF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246289CF-BDF7-4344-95F8-78F6B00B4F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246289CF-BDF7-4344-95F8-78F6B00B4F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246289CF-BDF7-4344-95F8-78F6B00B4F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246289CF-BDF7-4344-95F8-78F6B00B4F38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF247496-060C-463D-ADB9-F656E2AF5FF9}
+	EndGlobalSection
+EndGlobal
