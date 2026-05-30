@@ -21,8 +21,8 @@ namespace ChaoticCupid.Service
 
         public CupidService()
         {
-            _timer = new Timer(async _ => await SendLetters(), null,
-                TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1));  // send letters every minute
+            _timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // send letters every minute
+                TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1));
         }
 
         public bool InitSinglePerson(string username, string city, int age, string phone)
@@ -66,7 +66,7 @@ namespace ChaoticCupid.Service
             {
                 var receiver = entry.Value;
 
-                if (!await receiver.LetterSemaphore.WaitAsync(0))
+                if (!await receiver.LetterSemaphore.WaitAsync(0))   // if they are already processing a letter, skip them
                     continue;
 
                 try

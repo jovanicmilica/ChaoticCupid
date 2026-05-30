@@ -1,9 +1,5 @@
 ﻿using ChaoticCupid.Service.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Web;
 
 namespace ChaoticCupid.Service.Contracts
 {

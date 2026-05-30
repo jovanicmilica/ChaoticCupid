@@ -20,9 +20,12 @@ namespace ChaoticCupid.Service.Services
                 if (candidate.Username == receiver.Username)
                     continue;
 
-                // Skip blocked users
-                if (receiver.BlockedUsers.Contains(candidate.Username))
-                    continue;
+                // Skip blocked users 
+                lock (receiver.BlockedUsers)
+                {
+                    if (receiver.BlockedUsers.Contains(candidate.Username))
+                        continue;
+                }
 
                 int score = CalculateScore(receiver, candidate);
 
