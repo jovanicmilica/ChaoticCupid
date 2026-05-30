@@ -67,9 +67,9 @@ namespace ChaoticCupid.Service.Services
         public static string GetRandomMessage()
         {
             string[] messages = {
-                "Radujem se nasem susretu!",
-                "Zelim da se upoznamo.",
-                "Nisam zainteresovan/a za upoznavanje."
+                "Looking forward to our meeting!",
+                "I would like to get to know you.",
+                "I am not interested in meeting."
             };
 
             using (var rng = new RNGCryptoServiceProvider())

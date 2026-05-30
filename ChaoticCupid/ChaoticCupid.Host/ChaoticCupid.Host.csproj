@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{246289CF-BDF7-4344-95F8-78F6B00B4F38}</ProjectGuid>
+    <ProjectGuid>{164FEEE1-014B-47FB-BA35-628C921BE467}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ChaoticCupid.Client</RootNamespace>
-    <AssemblyName>ChaoticCupid.Client</AssemblyName>
+    <RootNamespace>ChaoticCupid.Host</RootNamespace>
+    <AssemblyName>ChaoticCupid.Host</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CupidCallbackHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

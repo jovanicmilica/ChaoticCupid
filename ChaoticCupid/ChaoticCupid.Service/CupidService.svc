@@ -1,0 +1,5 @@
+﻿using System.ServiceModel;
+
+<%@ ServiceHost Language = "C#" Debug="true" 
+    Service="ChaoticCupid.Service.CupidService" 
+    CodeBehind="CupidService.cs" %>

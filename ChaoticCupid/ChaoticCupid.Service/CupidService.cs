@@ -21,8 +21,11 @@ namespace ChaoticCupid.Service
 
         public CupidService()
         {
-            _timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // send letters every minute
-                TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1));
+            //_timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // send letters every minute
+            //    TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1));
+
+                _timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // testing
+                    TimeSpan.FromSeconds(6), TimeSpan.FromSeconds(6));
         }
 
         public bool InitSinglePerson(string username, string city, int age, string phone)
@@ -51,8 +54,6 @@ namespace ChaoticCupid.Service
 
             if (_persons.TryAdd(username, person))
             {
-                Console.WriteLine($"User '{username}' registered successfully!");
-                Console.WriteLine($"       City: {city}, Age: {age}, Phone: {phone}");
                 return true;
             }
 
@@ -80,14 +81,13 @@ namespace ChaoticCupid.Service
                     }
 
                     string message = MatchMaker.GetRandomMessage();
-                    bool showPhone = !message.Contains("Nisam zainteresovan");
+                    bool showPhone = !message.Contains("I am not interested");
 
                     receiver.Callback.ReceiveLetter(sender, message, showPhone);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Failed to send letter to {receiver.Username}: {ex.Message}");
-                    receiver.LetterSemaphore.Release();
                 }
             }
         }
