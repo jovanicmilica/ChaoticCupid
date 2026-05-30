@@ -21,11 +21,11 @@ namespace ChaoticCupid.Service
 
         public CupidService()
         {
-            //_timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // send letters every minute
-            //    TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1));
+            _timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // send letters every minute
+                TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1));
 
-                _timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // testing
-                    TimeSpan.FromSeconds(6), TimeSpan.FromSeconds(6));
+            //_timer = new Timer(_ => SendLetters().GetAwaiter().GetResult(), null,   // testing
+            //        TimeSpan.FromSeconds(6), TimeSpan.FromSeconds(6));
         }
 
         public bool InitSinglePerson(string username, string city, int age, string phone)
