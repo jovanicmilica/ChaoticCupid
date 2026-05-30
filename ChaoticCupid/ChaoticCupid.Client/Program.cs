@@ -22,7 +22,11 @@ namespace ChaoticCupid.Client
             string city = Console.ReadLine();
 
             Console.Write("Enter age: ");
-            int age = int.Parse(Console.ReadLine());
+            int age;
+            while (!int.TryParse(Console.ReadLine(), out age) || age <= 0)
+            {
+                Console.WriteLine("Invalid age! Please enter a positive number:");
+            }
 
             Console.Write("Enter phone: ");
             string phone = Console.ReadLine();
